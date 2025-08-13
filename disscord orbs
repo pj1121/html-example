@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PSM｜Discord Orbs 入門 Step Card</title>
+
+<!-- 字體（PSM 指定）:contentReference[oaicite:1]{index=1} -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* PSM 品牌色:contentReference[oaicite:2]{index=2} */
+    --psm-cyan-1:#65b8b9;  /* 主色 */
+    --psm-cyan-2:#139ca7;  /* 次要強調 */
+    --psm-deep:#004149;    /* 深色 */
+    --bg:#0b0f10;
+    --card:#ffffff;
+    --text:#1f2a2e;
+    --muted:#556064;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background: radial-gradient(1000px 600px at 80% -10%, rgba(19,156,167,.25), transparent 60%),
+                linear-gradient(180deg, #0a0f10 0%, #0d1416 100%);
+    font-family: 'Noto Sans TC','Montserrat',system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
+    color:var(--text);
+    padding:32px 18px 80px;
+  }
+
+  .wrap{ max-width:880px; margin:0 auto; }
+
+  /* 頂部區 */
+  .hero{
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:24px;
+  }
+  .hero img{
+    height:48px; width:auto; display:block;
+    /* 安全距離留白（不改 Logo 比例）:contentReference[oaicite:3]{index=3} */
+    padding:6px; background:rgba(101,184,185,.08); border-radius:12px;
+  }
+  .hero h1{
+    margin:0; font-size:clamp(20px,3.5vw,28px);
+    color:#e9f4f5; font-weight:700; letter-spacing:.4px;
+  }
+  .hero p{ margin:4px 0 0; color:#b8c8cb; font-size:14px; }
+
+  /* Step 列表 */
+  .steps{
+    display:grid; grid-template-columns:1fr; gap:18px;
+  }
+  .step{
+    background:var(--card); border-radius:14px; padding:20px 18px;
+    border-left:10px solid var(--psm-cyan-1);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    display:flex; gap:14px; align-items:flex-start;
+  }
+  .badge{
+    flex:0 0 auto; width:42px; height:42px; border-radius:50%;
+    background:var(--psm-deep); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-weight:700; box-shadow:0 6px 14px rgba(0,65,73,.26);
+  }
+  .content h3{ margin:2px 0 6px; font-size:18px; font-weight:700; color:var(--psm-deep); }
+  .content p{ margin:0; font-size:14px; line-height:1.7; color:var(--muted); }
+  .hint{
+    margin-top:10px; padding:10px 12px; border-radius:10px;
+    background:rgba(101,184,185,.10); color:#20464b; font-size:13px;
+    border:1px dashed rgba(19,156,167,.35);
+  }
+
+  .note{ margin-top:20px; color:#91a3a6; font-size:12px; }
+
+  @media (min-width:760px){
+    .steps{ grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 放正式 Logo -->
+    <div class="hero">
+      <img src="https://thumbsnap.com/i/CvSP3Zwn.png" alt="PSM Logo">
+      <div>
+        <h1>Discord Orbs 入門指南</h1>
+        <p>三分鐘搞懂這顆「球」在幹嘛，少走冤枉路，多活幾條肝。</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <article class="step">
+        <div class="badge">1</div>
+        <div class="content">
+          <h3>Orbs 是什麼？</h3>
+          <p>它是 Discord 上的擴充模組/功能集合（俗稱「球」），用來強化伺服器體驗——像互動、任務、徽章或自動化。把它想成「伺服器的外掛包」。</p>
+          <div class="hint">若你指的是特定專案的 Orbs，請把正式定義與連結塞進來。</div>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="badge">2</div>
+        <div class="content">
+          <h3>加入伺服器／授權</h3>
+          <p>確認你有管理權限，將 Orbs（或對應 Bot / App）加入指定伺服器；授予必要的讀寫頻道與訊息管理權限，別讓它成為擺設。</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="badge">3</div>
+        <div class="content">
+          <h3>建立或啟用 Orb</h3>
+          <p>在控制台選擇要啟用的類型：歡迎任務、簽到、表單、抽獎或經驗值系統。設定名稱、觸發條件與對應頻道。</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="badge">4</div>
+        <div class="content">
+          <h3>配置頻道與權限</h3>
+          <p>把 Orb 綁定到指定頻道，檢查 @everyone/@here 的讀寫權限。需要反應或按鈕互動的功能，請確保成員能發言/按鈕互動。</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="badge">5</div>
+        <div class="content">
+          <h3>發布與測試</h3>
+          <p>先在測試頻道演練一次：訊息格式、按鈕、回覆權限都 OK 再上正式頻道。不要把整個社群當 QA。</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="badge">6</div>
+        <div class="content">
+          <h3>監控與優化</h3>
+          <p>追蹤互動數與完成率；表現不佳就調整觸發規則或文案，該砍砍、該重做重做。我們尊重數據，數據不尊重人。</p>
+          <div class="hint">若有「/orb stats」或儀表板，請補上實際指令與路徑。</div>
+        </div>
+      </article>
+    </div>
+
+    <p class="note">
+      視覺遵循 PSM 品牌手冊：主色 #65b8b9、輔助 #139ca7、深色 #004149；字體 Montserrat / Noto Sans CJK TC:contentReference[oaicite:4]{index=4}。
+    </p>
+  </div>
+</body>
+</html>
